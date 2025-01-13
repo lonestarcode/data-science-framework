@@ -11,14 +11,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
         python-version: '3.9'
+    
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
+        pip install pytest pytest-cov
         pip install -r requirements.txt
+    
+    - name: Create directory structure
+      run: |
+        mkdir -p data-science-framework/projects/hybrid_llm_scraper/tests
+        mkdir -p data-science-framework/projects/hybrid_llm_scraper/src/scraper
+        mkdir -p data-science-framework/projects/hybrid_llm_scraper/src/pipeline
+    
     - name: Run tests
       run: |
-        pytest tests/ 
+        cd data-science-framework/projects/hybrid_llm_scraper
+        python -m pytest tests/ -v 
