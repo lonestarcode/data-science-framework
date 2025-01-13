@@ -1,5 +1,3 @@
-Here’s a general README.md for your data-science-framework project:
-
 Data Science Framework
 
 Overview
