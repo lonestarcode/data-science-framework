@@ -5,7 +5,7 @@ def test_basic():
 def test_import():
     """Test that we can import our package"""
     try:
-        import src
+        from src import scraper, pipeline
         assert True
-    except ImportError:
-        assert False, "Failed to import src package" 
+    except ImportError as e:
+        assert False, f"Failed to import package: {str(e)}" 
