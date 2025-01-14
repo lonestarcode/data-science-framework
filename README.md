@@ -112,8 +112,3 @@ Contributions are welcome! To contribute:
 	2.	Create a feature branch.
 	3.	Submit a pull request.
 
-License
-
-This project is licensed under the MIT License. See LICENSE for details.
-
-Let me know if you need any adjustments! 🚀
